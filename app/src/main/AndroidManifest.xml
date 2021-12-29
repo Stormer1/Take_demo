@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.take_demo">
+    <!-- if you want to load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/take_logo"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity">
+        </activity>
+        <activity android:name=".MycollectActivity" />
+        <activity
+            android:name=".SearchActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".SeconditemActivity" />
+        <activity android:name=".MainDetailActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Login_Activity" />
+        <activity
+            android:name=".BottomNavigationViewActivity"
+            android:label="@string/title_activity_bottom_navigation_view" />
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

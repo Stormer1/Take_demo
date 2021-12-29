@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BlankFragment">
+<!--    android:orientation="vertical">-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/blank_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#00000000"
+        app:subtitleTextColor="@color/white"
+        app:titleMarginStart="60dp"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:id="@+id/blanktoolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="WANANDROID"
+            android:textColor="#5A5656"
+            android:textSize="15sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    <com.miguelcatalan.materialsearchview.MaterialSearchView-->
+<!--        android:id="@+id/search_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+</LinearLayout>
+<com.scwang.smart.refresh.layout.SmartRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout">
+
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+      android:background="#F5F5F5">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
+
+      <include
+          android:id="@+id/loading"
+          layout="@layout/loading_layout"
+          ></include>
+
+      <include
+          android:id="@+id/searcherror"
+          layout="@layout/search_error"
+          android:visibility="gone"></include>
+
+      <include
+          android:id="@+id/neterror2"
+          layout="@layout/neterror"
+          android:visibility="gone"></include>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/fragment_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone">
+      </androidx.recyclerview.widget.RecyclerView>
+
+  </LinearLayout>
+
+    <com.scwang.smart.refresh.footer.ClassicsFooter
+    android:layout_width="match_parent"
+    android:layout_height="40dp" />
+
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

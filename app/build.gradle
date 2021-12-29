@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.example.take_demo"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    // ViewPager 2 需要使用 RecycleView 的 adapter
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+    //图片轮播框架
+    implementation 'com.youth.banner:banner:1.4.10'
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    //支持okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+//    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+////    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+////    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //AgentWeb
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx' // (必选)
+    implementation 'com.github.Justson.AgentWeb:agentweb-filechooser:v4.1.9-androidx' // (可选)
+    implementation 'com.github.Justson:Downloader:v4.1.9-androidx' // (可选)
+    implementation 'com.github.Justson:CoolIndicator:v1.0.0'
+
+
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    implementation 'com.scwang.smart:refresh-header-radar:2.0.3'       //雷达刷新头
+    implementation 'com.scwang.smart:refresh-header-falsify:2.0.3'     //虚拟刷新头
+    implementation 'com.scwang.smart:refresh-header-material:2.0.3'    //谷歌刷新头
+    implementation 'com.scwang.smart:refresh-header-two-level:2.0.3'   //二级刷新头
+    implementation 'com.scwang.smart:refresh-footer-ball:2.0.3'        //球脉冲加载
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.3'    //经典加载
+
+    //收藏button
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+// 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+
+
+}

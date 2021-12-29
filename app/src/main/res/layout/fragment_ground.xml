@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GroundFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/groung_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#00000000"
+        app:navigationContentDescription=""
+        app:subtitle=""
+        app:subtitleTextColor="@color/white"
+        app:title=""
+        app:titleMarginStart="60dp"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:id="@+id/groungtoolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="广场"
+            android:textColor="#5A5656"
+            android:textSize="13sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/book_indicator2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+</LinearLayout>
