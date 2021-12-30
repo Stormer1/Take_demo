@@ -65,7 +65,7 @@ public class Login_Activity extends AppCompatActivity {
     private final HashMap<String, List<Cookie>> cookieStore = new HashMap<>();
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
-    private String user;
+    private String user;//
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
